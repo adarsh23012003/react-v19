@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@keyframes moveX {
+  0%,
+  100% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.moving-bike {
+  animation: moveX 5s infinite ease-in-out;
+}
