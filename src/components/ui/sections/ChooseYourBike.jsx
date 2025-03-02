@@ -1,54 +1,60 @@
 import BikeCard from "../cards/BikeCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 function ChooseYourBike() {
   const data = [
     {
-      image: "/content/lp1.png",
-      title: "Aerion Carbon Helmet",
-      subtitle: "( Fashionable )",
+      image: "/content/st1.png",
+      title: "Klager GSX 250 R",
+      subtitle: "(Fashion , Twin Disc)",
       price: "$490",
       discount: "$590",
     },
     {
-      image: "/content/lp2.png",
-      title: "Softy Original Glove",
-      subtitle: "( Fashionable )",
+      image: "/content/st2.png",
+      title: "Klager GSX 250 R",
+      subtitle: "(Fashion , Twin Disc)",
       price: "$490",
       discount: "$590",
     },
     {
-      image: "/content/lp3.png",
-      title: "Reckles Jacket",
-      subtitle: "( Fashionable )",
+      image: "/content/st3.png",
+      title: "Klager GSX 250 R",
+      subtitle: "(Fashion , Twin Disc)",
       price: "$490",
       discount: "$590",
     },
     {
-      image: "/content/lp4.png",
-      title: "Flicky Traco Boot",
-      subtitle: "( Fashionable )",
+      image: "/content/st4.png",
+      title: "Klager GSX 250 R",
+      subtitle: "(Fashion , Twin Disc)",
       price: "$490",
       discount: "$590",
     },
     {
-      image: "/content/lp5.png",
-      title: "Reckles Jacket",
-      subtitle: "( Fashionable )",
+      image: "/content/st5.png",
+      title: "Klager GSX 250 R",
+      subtitle: "(Fashion , Twin Disc)",
       price: "$490",
       discount: "$590",
     },
     {
-      image: "/content/lp6.png",
-      title: "Flicky Traco Boot",
-      subtitle: "( Fashionable )",
+      image: "/content/st6.png",
+      title: "Klager GSX 250 R",
+      subtitle: "(Fashion , Twin Disc)",
       price: "$490",
       discount: "$590",
     },
   ];
+
   return (
     <>
       <div className="flex flex-col gap-3 text-center">
-        <h1 className="text-3xl sm:text-5xl font-normal">Choose Your Bike</h1>
+        <h1 className="text-3xl sm:text-4xl">Choose Your Bike</h1>
         <div className="flex items-center">
           <hr className="border w-full border-primary" />
           <button className="bg-gradient-to-r from-primary to-secondary font-semibold text-white text-nowrap px-16 py-1.5 rounded-full">
@@ -57,17 +63,36 @@ function ChooseYourBike() {
           <hr className="border w-full border-secondary" />
         </div>
       </div>
-      <div className="w-full mx-auto py-5 sm:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center gap-5">
-        {data.map((item, index) => (
-          <BikeCard
-            title={item.title}
-            image={item.image}
-            price={item.price}
-            discount={item.discount}
-            subtitle={item.subtitle}
-            key={index}
-          />
-        ))}
+      <div className="py-5 sm:py-10">
+        <Swiper
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 3 },
+          }}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          navigation={true}
+          loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Navigation, Pagination]}
+          className="mySwiper"
+        >
+          {data.map((item, index) => (
+            <SwiperSlide key={index}>
+              <BikeCard
+                title={item.title}
+                image={item.image}
+                price={item.price}
+                discount={item.discount}
+                subtitle={item.subtitle}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </>
   );
