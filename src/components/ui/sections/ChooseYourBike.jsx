@@ -11,43 +11,43 @@ function ChooseYourBike() {
       image: "/content/st1.png",
       title: "Klager GSX 250 R",
       subtitle: "(Fashion , Twin Disc)",
-      price: "$490",
-      discount: "$590",
+      price: "$699",
+      discount: "$799",
     },
     {
       image: "/content/st2.png",
       title: "Klager GSX 250 R",
       subtitle: "(Fashion , Twin Disc)",
-      price: "$490",
-      discount: "$590",
+      price: "$699",
+      discount: "$799",
     },
     {
       image: "/content/st3.png",
       title: "Klager GSX 250 R",
       subtitle: "(Fashion , Twin Disc)",
-      price: "$490",
-      discount: "$590",
+      price: "$699",
+      discount: "$799",
     },
     {
       image: "/content/st4.png",
       title: "Klager GSX 250 R",
       subtitle: "(Fashion , Twin Disc)",
-      price: "$490",
-      discount: "$590",
+      price: "$699",
+      discount: "$799",
     },
     {
       image: "/content/st5.png",
       title: "Klager GSX 250 R",
       subtitle: "(Fashion , Twin Disc)",
-      price: "$490",
-      discount: "$590",
+      price: "$699",
+      discount: "$799",
     },
     {
       image: "/content/st6.png",
       title: "Klager GSX 250 R",
       subtitle: "(Fashion , Twin Disc)",
-      price: "$490",
-      discount: "$590",
+      price: "$699",
+      discount: "$799",
     },
   ];
 
@@ -58,7 +58,7 @@ function ChooseYourBike() {
         <div className="flex items-center">
           <hr className="border w-full border-primary" />
           <button className="bg-gradient-to-r from-primary to-secondary font-semibold text-white text-nowrap px-16 py-1.5 rounded-full">
-            25% OFF
+            50% OFF
           </button>
           <hr className="border w-full border-secondary" />
         </div>
